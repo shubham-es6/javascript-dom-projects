@@ -1,100 +1,29 @@
-
-let arr = [
-  {
-    shortName: "CSK",
-    fullName: "Chennai Super Kings",
-    trophies: 5,
-    captain: "MS Dhoni",
-    primary: "yellow",
-    secondary: "blue",
-  },
-
-  {
-    shortName: "RCB",
-    fullName: "Royal Challengers Bengaluru",
-    trophies: 0,
-    captain: "Faf du Plessis",
-    primary: "red",
-    secondary: "black",
-  },
-
-  {
-    shortName: "MI",
-    fullName: "Mumbai Indians",
-    trophies: 5,
-    captain: "Hardik Pandya",
-    primary: "blue",
-    secondary: "gold",
-  },
-
-  {
-    shortName: "KKR",
-    fullName: "Kolkata Knight Riders",
-    trophies: 3,
-    captain: "Shreyas Iyer",
-    primary: "purple",
-    secondary: "gold",
-  },
-
-  {
-    shortName: "RR",
-    fullName: "Rajasthan Royals",
-    trophies: 1,
-    captain: "Sanju Samson",
-    primary: "pink",
-    secondary: "blue",
-  },
-
-  {
-    shortName: "PBKS",
-    fullName: "Punjab Kings",
-    trophies: 0,
-    captain: "Shikhar Dhawan",
-    primary: "red",
-    secondary: "silver",
-  },
-
-  {
-    shortName: "GT",
-    fullName: "Gujarat Titans",
-    trophies: 1,
-    captain: "Shubman Gill",
-    primary: "darkblue",
-    secondary: "gold",
-  },
-
-  {
-    shortName: "LSG",
-    fullName: "Lucknow Super Giants",
-    trophies: 0,
-    captain: "KL Rahul",
-    primary: "skyblue",
-    secondary: "orange",
-  },
-];
+let btn = document.querySelector("button");
 let main = document.querySelector("main");
 
-let h1 = document.querySelector("h1");
-
-let fullName = document.querySelector("#fullname");
-
-let captain = document.querySelector("#captain");
-
-let trophies = document.querySelector("#trophies");
-
-let btn = document.querySelector("button");
-
 btn.addEventListener("click", function () {
-  let winner = arr[Math.floor(Math.random() * arr.length)];
+  let div = document.createElement("div");
 
-  h1.innerHTML = winner.shortName;
+  let randomNum1 = Math.random() * 100;
+  let randomNum2 = Math.random() * 100;
+  let rotation = Math.random() * 360;
 
-  fullName.textContent = winner.fullName;
+  let color1 = Math.floor(Math.random() * 256);
+  let color2 = Math.floor(Math.random() * 256);
+  let color3 = Math.floor(Math.random() * 256);
 
-  captain.textContent = "Captain " + winner.captain;
+  div.style.height = "50px";
+  div.style.width = "50px";
+  div.style.position = "absolute";
 
-  trophies.textContent = "Trophies: " + winner.trophies;
 
-  h1.style.backgroundColor = winner.secondary;
-  main.style.backgroundColor = winner.primary;
+  div.style.left = randomNum1 + "%";
+  div.style.top = randomNum2 + "%";
+  div.style.rotate = rotation+'deg'
+
+  div.style.backgroundColor = `rgb(${color1},${color2},${color3})`;
+
+  main.appendChild(div);
+
+  console.log(div);
 });

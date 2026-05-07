@@ -14,34 +14,21 @@ body {
 main {
   height: 100%;
   width: 100%;
-  background-color: #111;
+  background-color: black;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
-  flex-direction: column;
-}
-
-main,
-h1 {
-  transition: 0.5s;
-}
-
-h1 {
-  font-size: 70px;
-  background-color: rgb(51, 0, 255);
-  padding: 40px 50px;
-  border-radius: 10px;
-  font-family: monospace;
 }
 
 button {
   padding: 10px 20px;
+  font-weight: 600;
   background-color: crimson;
   border: none;
-  border-radius: 5px;
-  font-weight: 600;
   cursor: pointer;
+  border-radius: 2px;
+  position: relative;
+  z-index: 9;
 }
 
 button:active {

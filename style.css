@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  color: #fff;
+
   font-family: "Poppins", sans-serif;
 }
 
@@ -13,7 +13,7 @@ body {
 }
 
 body {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 main {
@@ -25,28 +25,71 @@ main {
   justify-content: center;
 }
 
-button {
-  padding: 15px 30px;
-  font-weight: 600;
+.card {
+  width: 90%;
+  max-width: 450px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.card p {
+  text-align: center;
+  margin: 40px;
   font-size: 20px;
-background-color: #8b5cf6;
-  border: none;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+}
+
+.card p span {
+  font-weight: 600;
+  color: royalblue;
+}
+
+.outer {
+  height: 20px;
+  border-radius: 50px;
+  width: 100%;
+  background-color: rgb(197, 197, 197);
+  overflow: hidden;
+}
+
+.inner {
+  height: 100%;
+  width: 0%;
+  border-radius: 50px;
+  background-color: green;
+  transition: width 0.3s ease;
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.bottom h2 {
+  font-size: clamp(32px, 6vw, 60px);
+  font-family: monospace;
+}
+
+.bottom button {
   cursor: pointer;
-  border-radius: 8px;
-  position: relative;
-  z-index: 9;
-  transition: all 0.2s ease;
-  box-shadow: 0 0 10px crimson;
+  padding: 12px 25px;
+  background-color: green;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  border: 0;
+  font-size: 18px;
+  transition:
+    opacity 0.2s ease,
+    transform 0.1s ease;
 }
 
-button:hover {
-  background-color: rgb(255, 30, 75);
-}
-
-button:active {
-  scale: (0.95);
-}
-
-h1 {
-  white-space: nowrap;
+.bottom button:focus {
+  outline: 2px solid black;
+  outline-offset: 2px;
 }

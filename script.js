@@ -1,21 +1,13 @@
-let grow = 0;
-let btn = document.querySelector("button");
-let h2 = document.querySelector("h2");
-let inner = document.querySelector(".inner");
+let btn = document.querySelector("#btn");
+let fileinp = document.querySelector("#fileinp");
 
 btn.addEventListener("click", function () {
-  btn.style.pointerEvents = "none";
+  fileinp.click();
+});
 
-  let num = 50 + Math.floor(Math.random() * 50);
-
-  let int = setInterval(() => {
-    grow++;
-    h2.innerHTML = grow + "%";
-    inner.style.width = grow + "%";
-  }, num);
-  setTimeout(() => {
-    clearInterval(int);
-    btn.innerHTML = "Downloaded";
-    btn.style.opacity = 0.5;
-  }, num * 100);
+fileinp.addEventListener("change", function (dets) {
+  const file = dets.target.files[0];
+  if (file) {
+    btn.textContent = file.name;
+  }
 });

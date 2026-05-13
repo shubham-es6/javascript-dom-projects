@@ -3,27 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Song Downloader UI</title>
+    <title>File Upload Interface</title>
     <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
   </head>
   <body>
     <main>
-      <div class="card">
-        <p>Click on the button below to download <span>song.mp3</span> file</p>
-
-        <div class="outer">
-          <div class="inner"></div>
-        </div>
-
-        <div class="bottom">
-          <h2>0%</h2>
-          <button>Download</button>
-        </div>
-      </div>
+      <input id="fileinp" type="file" />
+      <button id="btn" type="button">Upload File</button>
     </main>
     <script src="script.js"></script>
   </body>
